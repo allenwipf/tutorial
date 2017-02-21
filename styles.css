@@ -8,21 +8,30 @@ div {
 
 }
 
+p {
+	margin-top: 0.4em
+}
+
 h1 {
 
 	font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	line-height: 1.22;
 	letter-spacing: -.018em
 	font-size: 50px;
 	line-height: 1.22;
+	font-weight: 700;
+	margin-bottom:0em
 
 }
 
 h4 {
 
 	font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
-	letter-spacing: -.018em
-	font-size: 30px;
+	letter-spacing: -.018em;
+	font-size: 20px;
 	line-height: 1.22;
+	font-weight: 700;
+	margin-bottom:0em
 }
 
 img {

@@ -45,16 +45,35 @@
 
 <script src="https://gist.github.com/allenwipf/69a22835dd2294c898841b325ec03a76.js"></script>
 
-
-
-
-
+<h4>Success Modal</h4>
 
 <p>The successModal function does a few things. It fires the <span class="function">stopTimer</span> function which clears the <strong>waldoTimer</strong> object which stops the <span class="function">counter</span> function from updating the timer node, lastly this function adds the find time to a node within the modal and changes the display from "none" to "block"
 
 <script src="https://gist.github.com/allenwipf/7874afa5cc50d500776917c92f84ef6f.js"></script>
 
-<p> 
+<h4>Timer</h4>
+
+<p>At the beginning of the eventlisteners code, if you noticed, the page load time is saved as a variable. Using an interval timer, every 100th of a second the <span class="function">time</span> function fires which takes the time at that moment and subtracts the page load time. The return is then set as the innerHTML value of the element where the counter is displayed.
+<script src="https://gist.github.com/allenwipf/67c6cbd454efb727674411bfa8352066.js"></script>
+
+<h4>Highscore</h4>
+
+<p>When "Get High Scores" is click, the <span class="function">highScore</span> function is fired which makes an AJAX Get request to the server and after the Ruby process the request and returns the top scores, this function display the high scores on the modal and set it to 'block'.
+
+<script src="https://gist.github.com/allenwipf/a95fae302920a7b0c78b2f1e53557dcc.js"></script>
+
+<p>Below is both the Ruby code that saves the scores after each Waldo find and the code that retrieves the top 10 scores. Because the scores are saved as a string, there is some processing that has to happen to sort the scores and only retrieve top 10. 
+
+<script src="https://gist.github.com/allenwipf/5dd318c10b837e4b381e6af944a9c183.js"></script>
+
+<h4>Mouse Click Circle</h4>
+
+<p>Creating the circle around each mouse click is deceptively simple. When a click is made on the image, the <span class="function">mouseCircle</span> function is fired and the y.page and x.page coordinates of the click are added as top and left alignment for the circle image respectively. The image, which was set to display="none" up to this point, is not set to display="block."
+
+<script src="https://gist.github.com/allenwipf/4c2765037219196af768d1f8f113cbfb.js"></script>
+
+
+
 
 <div>
 </body>
