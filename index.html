@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Waldo Tutorial</title>
+
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+
+<div class="intro">
+<img id="waldoImage" src="images/waldo.jpeg" width="500" alt="Waldo">
+<h1>Where's Waldo Game</h1>
+<p>This is a game I created while attending Omaha Code School. To play, simply find Waldo as quickly as possible and click on him. Your score will then be saved in a text file on the server. A displayed timer will keep track of the seconds elapsed since the page was loaded. The top 10 fastest times can be viewed by click on "top scores."</p>
+<h4>Getting Started</h4>
+<p>To build this simple app I used HTML, CSS, Javascript, the Ruby framework Sinatra and AJAX. To start you'll need a little HTML markup:
+
+<script src="https://gist.github.com/allenwipf/66d47d84f91459bfe4e3e30d836096ae.js"></script>
+
+<p>What is most important for now is basic HTML with a Waldo Image which you can find with a quick Google search. The <strong>Modal</strong> element is for displaying a box to the player whenever Waldo is clicked on. The <strong>TimerDiv</strong> element is for displaying the timer and the <strong>"circle"</strong> image is for displaying a circle where the player clicks.</p>
+
+<p>After creating the HTML of course you'll need some styling otherwise it will be jumbled mess. I got the modal css from <a href="https://www.w3schools.com/howto/howto_css_modals.asp">www.w3school.com</a>
+
+<script src="https://gist.github.com/allenwipf/6e4889a946781712cbbb8edadb2f2590.js"></script>
+
+<p>Next lets take a look at the javascript before getting into the backend.>
+
+<h4>The Frontend Javascript</h4>
+
+<p>The only way for users to interact with this game is by clicking so we want to add a few eventListeners. Eventlisteners are added to different elements and fire a function when that event happens. 
+
+<script src="https://gist.github.com/allenwipf/3dd7fbe8583c013b969d3fef2d983780.js"></script>
+
+<p>The first eventlistener is added to the Waldo image which will fire a function to check if the click coordinates is within the range of where Waldo is. The second one is to close the the modal box, the third will show the modal populated with the top 10 scores and the last is also for the Waldo image and will show a circle where the player clicked. 
+
+<p>when the image is click, the following function fires which sends sends the coordinates of the click, via an AJAX post, to the server for verification. If the post returnText comes back as "true". The <span class="function">successModal</span> function will fire which shows the modal. 
+
+<script src="https://gist.github.com/allenwipf/c4775e431e978878e4999d9bbd45ff2e.js"></script>
+
+<h4>The Backend Ruby</h4>
+
+<p> When the AJAX request fires, posting the click coordinates, the Sinatra framework runs the following function which checks to see if the coordinates are with a specific range and returning true of false accordingly. Ruby handles a couple other functions such as saving scores and retrieving scores and I'll talk about those next.
+
+<script src="https://gist.github.com/allenwipf/69a22835dd2294c898841b325ec03a76.js"></script>
+
+
+
+
+
+
+<p>The successModal function does a few things. It fires the <span class="function">stopTimer</span> function which clears the <strong>waldoTimer</strong> object which stops the <span class="function">counter</span> function from updating the timer node, lastly this function adds the find time to a node within the modal and changes the display from "none" to "block"
+
+<script src="https://gist.github.com/allenwipf/7874afa5cc50d500776917c92f84ef6f.js"></script>
+
+<p> 
+
+<div>
+</body>
+</html>
