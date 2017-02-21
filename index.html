@@ -4,12 +4,14 @@
 <title>Waldo Tutorial</title>
 
 <link rel="stylesheet" type="text/css" href="styles.css">
+<script type = "text/javascript" src="scripts.js"></script>
 
 </head>
 <body>
 
 <div class="intro">
 <img id="waldoImage" src="images/waldo.jpeg" width="500" alt="Waldo">
+
 <h1>Where's Waldo Game</h1>
 <p>This is a game I created while attending Omaha Code School. To play, simply find Waldo as quickly as possible and click on him. Your score will then be saved in a text file on the server. A displayed timer will keep track of the seconds elapsed since the page was loaded. The top 10 fastest times can be viewed by click on "top scores."</p>
 <h4>Getting Started</h4>
@@ -39,7 +41,7 @@
 
 <h4>The Backend Ruby</h4>
 
-<p> When the AJAX request fires, posting the click coordinates, the Sinatra framework runs the following function which checks to see if the coordinates are with a specific range and returning true of false accordingly. Ruby handles a couple other functions such as saving scores and retrieving scores and I'll talk about those next.
+<p> When the AJAX request fires, posting the click coordinates, the Sinatra framework runs the following function which checks to see if the coordinates are with a specific range and returning true of false accordingly. Ruby handles a couple other functions such as saving scores and retrieving scores and I'll talk about those next as I go over the different features of the game. 
 
 <script src="https://gist.github.com/allenwipf/69a22835dd2294c898841b325ec03a76.js"></script>
 
